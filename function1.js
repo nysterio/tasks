@@ -1,4 +1,4 @@
-	function firstCharToUpperCase(yourString) {
+function firstCharToUpperCase(yourString) {
     var upperFirstSymbol = yourString.charAt(0).toUpperCase();
 	return upperFirstSymbol + yourString.slice(1);
 }

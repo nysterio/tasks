@@ -1,17 +1,17 @@
-function qntSubstr(str, substr) {
-    var qnt = 0;
-    var subLength = substr.length;
-
-    var i = 0;
-
-    while(str.indexOf(substr, i) != -1) {
-        qnt++;
-        i = str.indexOf(substr, i) + subLength + 1;  
+function quantitySubstring(str, substr) {
+    var quantity = 0;
+    var strLength = str.length;
+    
+    for(var index = 0; index < strLength; index++){
+        index = str.indexOf(substr, index);
+        if(index !== -1) {
+            quantity++;
+        }
+        else return quantity;   
     }
-    return qnt;
 }
 
 var str = prompt("Введите строку:");
 var substr = prompt("Введите подстроку:");
 
-alert("Количество вхождений подстроки: \n" + qntSubstr(str, substr));
+alert("Количество вхождений подстроки: \n" + quantitySubstring(str, substr));
